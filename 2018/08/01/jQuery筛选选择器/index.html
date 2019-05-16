@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="World Peace">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content>
+
+
+    <meta name="description" content="一、jQuery筛选选择器（方法）$(“div:first”)        直接获得第一个div （永远只能操作第一个）$(“div”).first()    先获得所有的div，从所有的中筛...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>深藏不露的width:auto | World Peace</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="World Peace" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="yanchunqing">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题" class="img-responsive center-block">
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">World Peace</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="深藏不露的width:auto">
+            
+	            深藏不露的width:auto
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/08/01</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="一、jQuery筛选选择器（方法）"><a href="#一、jQuery筛选选择器（方法）" class="headerlink" title="一、jQuery筛选选择器（方法）"></a>一、jQuery筛选选择器（方法）</h2><p>$(“div:first”)        直接获得第一个div （永远只能操作第一个）<br>$(“div”).first()    先获得所有的div，从所有的中筛选出第一个。 （可以操作第一个，也可以操作所有）</p>
+<p><strong>筛选选择器的功能与过滤选择器有点类似，但是用法不一样，筛选选择器主要是方法。</strong></p>
+<h4 id="1-1过滤"><a href="#1-1过滤" class="headerlink" title="1.1过滤"></a><strong>1.1过滤</strong></h4><p>eq(index | -index)  类型 :eq()<br>    index：正数，从头开始获得指定索引的元素。这个元素的位置是从0算起。0表示第一个<br>    -index：负数，从尾开始获得指定索引的元素。-1算起， -1表示最后一个，之前分别是-2，-3…..<img src="C:\Users\student\Desktop\07.jquery\a.bmp" alt="a"><br>first()         第一个  :first</p>
+<p><img src="C:\Users\student\Desktop\07.jquery\b.bmp" alt="b"><br>last()         最后一个  :last</p>
+<p><img src="C:\Users\student\Desktop\07.jquery\c.bmp" alt="c"><br>is()             判断</p>
+<p><img src="C:\Users\student\Desktop\07.jquery\g.bmp" alt="g"><br>hasClass()     判断是否是指定class 。返回值true和false </p>
+<p><img src="C:\Users\student\Desktop\07.jquery\h.bmp" alt="h"><br>filter()     筛选出与指定表达式匹配的元素集合</p>
+<p><img src="C:\Users\student\Desktop\07.jquery\d.bmp" alt="d"><br>not()           将指定内容删除<img src="C:\Users\student\Desktop\07.jquery\aa.bmp" alt="aa"></p>
+<p>has()        子元素是否有，返回父元素</p>
+<p><img src="C:\Users\student\Desktop\07.jquery\f.bmp" alt="f"><br>slice(start , end)  截取元素 ，(3,5)  –&gt; 3,4  （包前不包后）<img src="C:\Users\student\Desktop\07.jquery\e.bmp" alt="e"></p>
+<h4 id="1-2查找"><a href="#1-2查找" class="headerlink" title="1.2查找"></a><strong>1.2查找</strong></h4><a><br><br>    <b><br><br>        <c></c><br>        <d></d><br>        <e></e><br>        <f></f><br>    </b><br></a>
+
+<p>B.children([…])    获得所有的子元素。CDEF<br>A.find(D)              从指定的区域查询指定元素。D<br>D.next()                 下一个兄弟。E<br>D.nextAll()           后面的所有兄弟。EF<br>E.prev()                 上一个兄弟。D  （previous）<br>E.prevAll()            前面的所有兄弟。CD<br>E.siblings()          所有兄弟。CDF<br>E.parent()             父元素。B<br>E.closest(A)          向上获得指定的父元素（含自己），如果获得返回一个对象，如果没有没有对象。<br>E.parents()           获得所有的父元素。AB</p>
+<h4 id="1-3串联"><a href="#1-3串联" class="headerlink" title="1.3串联"></a><strong>1.3串联</strong></h4><p>A.add(B)  将A和B组合一个对象 。类似 $(“A,B”)<img src="C:\Users\student\Desktop\07.jquery\1.bmp" alt="1"></p>
+<p>end() ：回到最近的一个操作之前</p>
+<p>A.children().children().end() .end()<br>      A    孩子        孙子        孩子     A<img src="C:\Users\student\Desktop\07.jquery\3.bmp" alt="3"></p>
+<p>contents()  获得所有的子节点（子元素 和 文本）<img src="C:\Users\student\Desktop\07.jquery\4.bmp" alt="4"></p>
+<h2 id="二、事件"><a href="#二、事件" class="headerlink" title="二、事件"></a>二、事件</h2><h4 id="2-1事件绑定的方式"><a href="#2-1事件绑定的方式" class="headerlink" title="2.1事件绑定的方式"></a><strong>2.1事件绑定的方式</strong></h4><p>jQuery事件绑定的几种方式：on   bind   detegate</p>
+<pre><code>对应解除的几种方式：off   unbind  undetegate 
+</code></pre><p>从jquery1.7之后，统一用on方法来添加绑定事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(“#uu”).on(“click”,function()&#123;&#125;)       //直接给uu添加点击事件</span><br><span class="line"></span><br><span class="line">$(“#uu”).on(“click”,”li”,function()&#123;&#125; )    //li的click事件委托给uu来处理</span><br><span class="line"></span><br><span class="line">$(“#uu”).off(“click”,”li”)              //解绑事件</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$p.click(function()&#123;&#125;)   </span><br><span class="line"></span><br><span class="line">$p.bind(“click.a”,function()&#123; &#125;)     //绑定时间</span><br><span class="line"></span><br><span class="line">$p.unbind(“click.a”)             //解绑事件</span><br><span class="line"></span><br><span class="line">$p.one(“click”,function()&#123;&#125;)        //只能点击一次的事件</span><br><span class="line"></span><br><span class="line">//不支持动态事件绑定</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">delegate 事件委托 </span><br><span class="line"></span><br><span class="line">$(“#uu”).delegate(“li”,”click”,function()&#123;&#125;)  // li的click事件委托给uu来处理</span><br><span class="line"></span><br><span class="line">$(“#uu”).undelegate(“li”,”click”)          //解开li的click事件的委托</span><br></pre></td></tr></table></figure>
+<p><strong>相同点：</strong>1.都支持单元素多事件的绑定；空格相隔方式或者大括号替代方式;</p>
+<p>　 　　   2.均是通过事件冒泡方式，将事件传递到document进行事件的响应；</p>
+<h4 id="2-2jQuery事件对象"><a href="#2-2jQuery事件对象" class="headerlink" title="2.2jQuery事件对象"></a><strong>2.2jQuery事件对象</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">screenX和screenY	对应屏幕最左上角的值</span><br><span class="line">clientX和clientY	距离可视区左上角的位置（忽视滚动条）</span><br><span class="line">pageX和pageY	    距离页面最顶部的左上角的位置（会计算滚动条的距离）</span><br><span class="line"></span><br><span class="line">event.keyCode	 按下的键盘代码</span><br><span class="line">event.data	     存储绑定事件时传递的附加数据</span><br><span class="line"></span><br><span class="line">event.stopPropagation()	阻止事件冒泡行为</span><br><span class="line">event.preventDefault()	阻止浏览器默认行为</span><br><span class="line">return false:既能阻止事件冒泡，又能阻止浏览器默认行为。</span><br></pre></td></tr></table></figure>
+<h4 id="2-3-jQuery事件冒泡-默认事件"><a href="#2-3-jQuery事件冒泡-默认事件" class="headerlink" title="2.3 jQuery事件冒泡/默认事件"></a><strong>2.3 jQuery事件冒泡/默认事件</strong></h4><p>直接使用：return  false ;</p>
+<h4 id="2-4-jquery的data方法"><a href="#2-4-jquery的data方法" class="headerlink" title="2.4 jquery的data方法"></a><strong>2.4 jquery的data方法</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$dv.data(&quot;name&quot;,&quot;zhangsan&quot;);  //绑定数据   </span><br><span class="line"></span><br><span class="line"> $dv.removeData(&quot;name&quot;);       //移除数据   </span><br><span class="line"></span><br><span class="line"> console.log($dv.data(&quot;name&quot;));  //获取</span><br></pre></td></tr></table></figure>
+<p>原理：<br>jQuery的data方法并不是将数据直接放到当前的jQuery对象或者dom对象上的，而是通过jQuery.cache对象来缓存的数据。</p>
+<p>1.先给dom对象新增一个jquery.expando属性，这个属性的值为id(id是从1开始递增的)<br>2.而id又作为jQuery.cache的属性（key）。这样dom对象就与jQuery.cache建立了联系。</p>
+<h2 id="三、jQuery动画"><a href="#三、jQuery动画" class="headerlink" title="三、jQuery动画"></a>三、jQuery动画</h2><h4 id="3-1基本动画"><a href="#3-1基本动画" class="headerlink" title="3.1基本动画"></a>3.1基本动画</h4><ul>
+<li><p>显示(show)与隐藏(hide)</p>
+</li>
+<li><p>slideUp/slideDown 滑入/滑出</p>
+</li>
+<li><p>fadeIn/fadeOut 淡入/淡出</p>
+</li>
+<li><p>stop()  停止动画</p>
+</li>
+</ul>
+<h4 id="3-2自定义动画"><a href="#3-2自定义动画" class="headerlink" title="3.2自定义动画"></a>3.2自定义动画</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).animate(&#123;params&#125;,[speed],[callback]);</span><br></pre></td></tr></table></figure>
+<p>params 参数定义形成动画的 CSS 属性。</p>
+<p>可选的 speed 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。</p>
+<p>可选的 callback 参数是动画完成后所执行的函数名称。</p>
+<p>举例：把 <div> 元素移动到左边，直到 left 属性等于 250 像素为止：  </div></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;button&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;div&quot;).animate(&#123;left:&apos;250px&apos;&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="3-3动画队列"><a href="#3-3动画队列" class="headerlink" title="3.3动画队列"></a>3.3动画队列</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">	&lt;style&gt;</span><br><span class="line">		#box&#123;</span><br><span class="line">			width: 600px;</span><br><span class="line">			height: 50px;</span><br><span class="line">			background: red;</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">	var $box = $(&quot;#box&quot;);</span><br><span class="line">	//当前正在进行的动画</span><br><span class="line">	$box.animate(&#123;</span><br><span class="line">		&quot;width&quot;:200</span><br><span class="line">	&#125;,2000,function()&#123;</span><br><span class="line">		console.log(&quot;啊哈哈&quot;);</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	$box.animate(&#123;</span><br><span class="line">		&quot;width&quot;:1000</span><br><span class="line">	&#125;,2000,function()&#123;</span><br><span class="line">		console.log(&quot;啊哈哈&quot;);</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	//这边的结果是： 清空动画队列   让之前动画不回到动画结束的状态</span><br><span class="line">	//stop本身的意思：让当前正在进行的动画停止</span><br><span class="line">	$box.stop(true,true).animate(&#123;</span><br><span class="line">		&quot;width&quot;:100</span><br><span class="line">	&#125;,2000,function()&#123;</span><br><span class="line">		console.log(&quot;啊哈哈&quot;);</span><br><span class="line">	&#125;)</span><br><span class="line">	</span><br><span class="line">	//stop(&quot;是否清空动画队列&quot;,&quot;是否让当前动画迅速来到动画结束后的状态&quot;)  </span><br><span class="line">	</span><br><span class="line">	//在jquery中如果给同一个元素添加多个动画的时候，后面一个动画会被添加到动画队列里面去。</span><br><span class="line">	//在动画队列中的动画会在前一个动画执行完毕之后开始执行</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/08/01/CSS的widthauto的深入理解/" class="pre-post btn btn-default" title="深藏不露的width:auto">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">深藏不露的width:auto</span>
+        </a>
+    
+    
+        <a href="/2018/06/06/块级格式化上下文 BFC/" class="next-post btn btn-default" title="块级格式化上下文 BFC">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">块级格式化上下文 BFC</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: ''.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、jQuery筛选选择器（方法）"><span class="toc-text">一、jQuery筛选选择器（方法）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1过滤"><span class="toc-text">1.1过滤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2查找"><span class="toc-text">1.2查找</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3串联"><span class="toc-text">1.3串联</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#二、事件"><span class="toc-text">二、事件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1事件绑定的方式"><span class="toc-text">2.1事件绑定的方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2jQuery事件对象"><span class="toc-text">2.2jQuery事件对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-jQuery事件冒泡-默认事件"><span class="toc-text">2.3 jQuery事件冒泡/默认事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-jquery的data方法"><span class="toc-text">2.4 jquery的data方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、jQuery动画"><span class="toc-text">三、jQuery动画</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1基本动画"><span class="toc-text">3.1基本动画</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2自定义动画"><span class="toc-text">3.2自定义动画</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3动画队列"><span class="toc-text">3.3动画队列</span></a></li></ol></li>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
